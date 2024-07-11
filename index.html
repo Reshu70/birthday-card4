@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bithday 4</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+
+
+
+/* card css start*/
+        .card {
+            width: 40rem;
+            height: 36rem;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            background-color: #eeeff0;
+            padding-top: 20px;
+            background-image: url('/birthday.jpg');
+        }
+        .card:hover {
+            transform: scale(1.05);
+            background-color: #b37a7a;
+           
+        }
+       
+
+        .card-img-top  {
+            height: 180px;
+            width: 70%;
+            object-fit: cover;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            animation: slide 3s infinite;
+           
+        }
+/*medie queary for all text and imgages start*/
+        @media (max-width:499px) {
+            .container-center{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding-bottom: 20px;
+            }
+            
+        }
+        /*medie queary for all text and imgages ends*/
+        .card{
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title{
+            color: white;
+            text-align: center;
+            font-size: 30px; /* Increase the size as needed */
+        }
+
+        @media (max-width: 575px) {
+            .card-title {
+                font-size: 24px; /* Increased font size for screens 575px or smaller */
+                text-align: center;
+                padding-left: 20px;
+            }
+        }
+
+        .card-text{
+            color:white;
+            text-align: center;
+            font-size: 20px; /* Increase the size as needed */
+           
+        }
+        @media (max-width:575px){
+            .card-text{
+                font-size:20px;
+                text-align: center; 
+            }
+        }
+
+/* card css ends*/
+
+/* side images start */
+.side-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.side-image {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.side-image:nth-child(1) { top: 10%; left: 5%; }
+.side-image:nth-child(2) { top: 60%; left: 5%; }
+.side-image:nth-child(3) { top: 10%; right: 5%; }
+.side-image:nth-child(4) { top: 60%; right: 5%; }
+
+@media (max-width: 768px) {
+    .side-image {
+        width: 60px;
+        height: 60px;
+    }
+}
+/*animation start side img*/
+.side-image {
+    transition: transform 0.2s ease-in-out;
+}
+
+.side-image:hover {
+    transform: scale(1.1); /* Adjust the scale factor as needed */
+}
+
+/*animation start side img*/
+/* side images ends */
+
+
+body {
+    animation: zoomIn 1s ease-in-out;
+    background: 
+    url('img/bc.avif');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+width: 100%;
+height: 100%;
+margin: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh; /* Full viewport height */
+
+/* sparkal animation on body start */
+position: relative;
+overflow: hidden;
+min-height: 100vh;
+margin: 0;
+padding: 0;
+
+.sparkle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background:gold;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+  }
+   
+}
+/* sparkal animation on body ends */
+/* card animation start */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/* card animation ends */
+
+.card-title{
+    color: white;
+    text-shadow: 1px 1px 2px rgb(218, 64, 64), 0 0 25px rgb(36, 36, 41), 0 0 5px darkblue;
+  }
+  .card-text{
+    color: white;
+    text-shadow: 1px 1px 2px rgb(133, 45, 45), 0 0 25px rgb(36, 36, 41), 0 0 5px darkblue;
+  }
+
+.card {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    color: white;
+    font-size: 2em;
+    margin: 0;
+}
+
+      /* animation for card image start */
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(10px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+       /*  animation for card image ends */
+       .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 8px 16px rgba(39, 38, 38, 0.2);
+    }
+
+/* animation on card  start*/
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0px); }
+      }
+      
+      @keyframes sparkle {
+        0% { opacity: 0; }
+        50% { opacity: 1; }
+        100% { opacity: 0; }
+      }
+      
+      @keyframes colorChange {
+        0% { background-color: #86a8e7; }
+        50% { background-color: #a786e7; }
+        100% { background-color: #86a8e7; }
+      }
+      
+      .card {
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .card-title {
+        animation: float 3s ease-in-out infinite;
+      }
+      
+      .card::before {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: white;
+        border-radius: 50%;
+        opacity: 0;
+        animation: sparkle 2s linear infinite;
+      }
+      
+      .card::after {
+        content: '';
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 10px;
+        height: 10px;
+        background: white;
+        border-radius: 50%;
+        opacity: 0;
+        animation: sparkle 2s linear infinite 1s;
+      }
+      
+      .div {
+        animation: colorChange 5s linear infinite;
+      
+      }
+      
+      .card-img-top {
+        transition: transform 0.3s ease-in-out;
+      }
+      
+      .card-img-top:hover {
+        transform: scale(1.1);
+      }
+      /* animation on card  ends*/
+
+
+      @keyframes sparkle {
+        0%, 100% { opacity: 0; transform: scale(0); }
+        50% { opacity: 1; transform: scale(1); }
+      }
+      
+      .card-body {
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .sparkle {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: gold;
+        border-radius: 50%;
+        opacity: 0;
+        pointer-events: none;
+      }
+      
+      .sparkle:nth-child(1) { top: 10%; left: 20%; animation: sparkle 3s infinite 0.5s; }
+      .sparkle:nth-child(2) { top: 30%; right: 15%; animation: sparkle 3s infinite 1s; }
+      .sparkle:nth-child(3) { bottom: 20%; left: 30%; animation: sparkle 3s infinite 1.5s; }
+      .sparkle:nth-child(4) { bottom: 10%; right: 25%; animation: sparkle 3s infinite 2s; }
+    </style>
+</head>
+<body>
+     
+<!-- main container start -->
+
+<div class="container-center">
+    <div class="card p-3" style="border: 1px solid #ccc; box-shadow: 0px 4px 8px rgba(39, 38, 38, 0.1);">
+        <div class="div p-2" style="border-radius: 10px 10px 0 0; background-image: linear-gradient(to right, #e01b49, #a3539f); color: white;">
+            <h5 class="card-title">HAPPY BIRTHDAY</h5>
+          </div>
+      <img src="img/baby.jpg" class="card-img-top mt-3" alt="..." style="box-shadow: 0px 4px 8px rgba(39, 38, 38, 0.1); border: 2px solid #ccc; display: block; margin: 0 auto; border-radius: 50%; width: 200px; height: 200px; object-fit: cover;">
+      <div class="card-body mt-5">
+        <!--sparkle start-->
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <h5 class="card-title">Join us to celebrate Olivia's 3rd birthday!</h5>
+        <p class="card-text">Saturday, October 17th at 2 p.m. 123<br> Anywhere St., Any City, ST 12345</p>
+        <p class="card-text">RSVP to Lillian Pratt (Carey's Mom)<br>123-456-7890</p>
+        <!--sparkle start-->
+      </div>
+    </div>
+    <!-- silde images start -->
+    <div class="side-images">
+        <img src="img/Birthday-Cake-1.webp" alt="Side Image 1" class="side-image">
+        <img src="img/candle-2.webp" alt="Side Image 2" class="side-image">
+        <img src="img/cake.jpg" alt="Side Image 3" class="side-image">
+        <img src="img/candle2.avif" alt="Side Image 4" class="side-image">
+    </div>
+    <!-- silde images ends -->
+  </div>
+  
+<!-- main container ends -->
+<script>
+    function createSparkle() {
+      const sparkle = document.createElement('div');
+      sparkle.className = 'sparkle';
+      
+      const size = Math.random() * 5 + 3;
+      sparkle.style.width = `${size}px`;
+      sparkle.style.height = `${size}px`;
+      
+      sparkle.style.left = `${Math.random() * 100}vw`;
+      sparkle.style.top = `${Math.random() * 100}vh`;
+      
+      const duration = Math.random() * 2 + 1;
+      sparkle.style.animation = `sparkle ${duration}s linear infinite`;
+      
+      document.body.appendChild(sparkle);
+      
+      setTimeout(() => {
+        sparkle.remove();
+      }, duration * 1000);
+    }
+    
+    setInterval(createSparkle, 200);
+    </script>
+    
+</body>
+</html>
